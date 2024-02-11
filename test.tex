@@ -141,10 +141,11 @@
 		\end{theorem}
 
 		\subsection*{Some important-to-remember limits}
-		\begin{align*}
+		\begin{align*}  % this one is also pretty hacky; i'd prefer using something like array for next time.
 			\lim_{x \to 0} \frac{1}{x} &= \text{DNE (1/0)} & \lim_{x \to 0} \frac{1}{x^2} &= \infty \\
 			\lim_{x \to 0} \frac{\sin{x}}{x} &= 1 & \lim_{x \to 0} \frac{\cos{x} - 1}{x} &= 0 \\
-			\lim_{x \to 0} (1 + x)^{1/x} &= e & \lim_{x \to 0} \frac{e^x - 1}{x} &= 1
+			\lim_{x \to 0} (1 + x)^{1/x} &= e & \lim_{x \to 0} \frac{e^x - 1}{x} &= 1 \\
+			\lim_{x \to 0} \sin{\frac{1}{x}} &= \text{DNE (chaos)}
 		\end{align*}
 	\end{multicols}
 	\pagebreak
