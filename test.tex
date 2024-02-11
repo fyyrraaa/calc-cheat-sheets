@@ -58,8 +58,8 @@
 
 		\subsection*{Sum and difference formulae}
 		\begin{align*}
-			\sin{(\theta \pm \phi)} &= \sin{a}\cos{b} \pm \cos{a}\sin{b} \\
-			\cos{(\theta \pm \phi)} &= \cos{a}\cos{b} \mp \sin{a}\sin{b} \\
+			\sin{(\theta \pm \phi)} &= \sin{\theta}\cos{\phi} \pm \cos{\theta}\sin{\phi} \\
+			\cos{(\theta \pm \phi)} &= \cos{\theta}\cos{\phi} \mp \sin{\theta}\sin{\phi} \\
 			\tan{(\theta \pm \phi)} &= \frac{\tan{\theta} \pm \tan{\phi}}{1 \mp \tan{\theta}\tan{\phi}}
 		\end{align*}
 
@@ -125,11 +125,11 @@
 			\lim_{x \to a}(f(x) \pm g(x)) &= \lim_{x \to a}f(x) \pm \lim_{x \to a}g(x) \\
 			\lim_{x \to a}(k \cdot f(x)) &= k \lim_{x \to a}f(x) \\
 			\lim_{x \to a}(f(x) \cdot g(x)) &= \lim_{x \to a}{f(x)} \cdot \lim_{x \to a}{g(x)} \\
-			\lim_{x \to a} \frac{f(x)}{g(x)} &= \frac{\lim_{x \to a} f(x)}{\lim_{x \to a} g(x)} \;\;\;\; (g(x) \neq 0) \\
+			\lim_{x \to a} \frac{f(x)}{g(x)} &= \frac{\lim_{x \to a} f(x)}{\lim_{x \to a} g(x)} \;\;\;\; (g(a) \neq 0) \\
 			\lim_{x \to a}f(x)^n &= \left( \lim_{x \to a}{f(x)}\right)^n \\
 		\end{align*}
 
-		If \(\displaystyle \lim_{x \to a} f(x) = L\), \(\lim_{x \to L} g(x) = K\) s.t. \(g(L) = K\), then
+		If \(\displaystyle \lim_{x \to a} f(x) = L\), \(\displaystyle \lim_{x \to L} g(x) = K\) s.t. \(g(L) = K\), then
 		\begin{equation*}
 			\lim_{x \to a} g(f(x)) = K.
 		\end{equation*}
