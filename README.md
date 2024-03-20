@@ -24,4 +24,8 @@ The resulting PDF document should be at the `./outputs` folder, which should be 
 Note that it uses pdfTeX as its engine; as such I cannot guarantee that it'll compile on LuaTeX nor XeTeX.
 I haven't had the time to test whether this will work with other TeX engines.
 
+## Attributions
+
+The cheat sheet is partly inspired by (and copied from) [Paul's Online Math Notes](https://tutorial.math.lamar.edu/); in particular his various cheat sheets for algebra and calculus, alongside my notes from this course.
+
 [^1]: The reason that it's in a submodule is more so that I have a set of common packages that I use all in one place, and readily available, as soon as the LaTeX repo is cloned.
