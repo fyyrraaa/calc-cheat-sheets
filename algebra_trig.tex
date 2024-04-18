@@ -1,0 +1,78 @@
+\documentclass[main.tex]{subfiles}
+
+\begin{document}
+\section{Algebra \& trigonometry}
+	\subsection*{Special angles}
+		% tables are hell—send help.
+		\begin{tabular}{r c c c c c c c c c}
+			\toprule
+			\textbf{DEG} & \(\ang{0}\) & \(\ang{30}\) & \(\ang{45}\) & \(\ang{60}\) & \(\ang{90}\) & \(\ang{120}\) & \(\ang{135}\) & \(\ang{150}\) & \(\ang{180}\) \\
+			\textbf{RAD} & \(0\) & \(\frac{\pi}{6}\) & \(\frac{\pi}{4}\) & \(\frac{\pi}{3}\) & \(\frac{\pi}{2}\) & \(\frac{2\pi}{3}\) & \(\frac{3\pi}{4}\) & \(\frac{5\pi}{6}\) & \(\pi\) \\ \midrule
+			\(\sin\theta\) & \(0\) & \(\frac{1}{2}\) & \(\frac{\sqrt{2}}{2}\) & \(\frac{\sqrt{3}}{2}\) & \(1\) & \(\frac{\sqrt{3}}{2}\) & \(\frac{\sqrt{2}}{2}\) & \(\frac{1}{2}\) & \(0\) \\
+			\(\cos\theta\) & \(1\) & \(\frac{\sqrt{3}}{2}\) & \(\frac{\sqrt{2}}{2}\) & \(\frac{1}{2}\) & \(0\) & \(-\frac{1}{2}\) & \(-\frac{\sqrt{2}}{2}\) & \(-\frac{\sqrt{3}}{2}\) & \(-1\) \\
+			\(\tan\theta\) & \(0\) & \(\frac{\sqrt{3}}{3}\) & \(1\) & \(\sqrt{3}\) & DNE & \(-\sqrt{3}\) & \(-1\) & \(-\frac{\sqrt{3}}{3}\) & \(0\) \\
+			\bottomrule
+		\end{tabular}
+
+		For the resulting values of trig functions to be positive, it follows a quadrant with the order \emph{all, sine, cosine, tangent} —
+		starting at the top-right and moving anticlockwise.
+
+	\begin{multicols}{2} \raggedcolumns \setcounter{unbalance}{10}
+		\subsection*{Cotangent \& some reciprocal identities}
+		\begin{align*}
+			\csc\theta &= \frac{1}{\sin\theta} & \cot\theta &= \frac{1}{\tan\theta} \\
+			\sec\theta &= \frac{1}{\cos\theta} & &= \frac{\cos\theta}{\sin\theta}
+		\end{align*}
+
+		\subsection*{Pythagorean identities}
+		\begin{align*}
+		\sin^2{\theta} + \cos^2{\theta} &= 1 \\
+		\tan^2{\theta} + 1 &= \sec^2{\theta} \\
+		1 + \cot^2{\theta} &= \csc^2{\theta}
+		\end{align*}
+
+		\subsection*{Sum and difference formulae}
+		\begin{align*}
+			\sin{(\theta \pm \phi)} &= \sin{\theta}\cos{\phi} \pm \cos{\theta}\sin{\phi} \\
+			\cos{(\theta \pm \phi)} &= \cos{\theta}\cos{\phi} \mp \sin{\theta}\sin{\phi} \\
+			\tan{(\theta \pm \phi)} &= \frac{\tan{\theta} \pm \tan{\phi}}{1 \mp \tan{\theta}\tan{\phi}}
+		\end{align*}
+
+		\subsection*{Double-angle \& half-angle formulae}
+		These build upon the sum-difference formulae.
+		\begin{align*}
+			\sin{2\theta} &= 2\sin{\theta}\cos{\theta} \\
+			\cos{2\theta} &= \cos^2{\theta} - \sin^2{\theta} \\
+			\tan{2\theta} &= \frac{2\tan{\theta}}{1 - \tan^2\theta} \\
+			\sin{\frac{\theta}{2}} &= \pm \sqrt{\frac{1 - \cos\theta}{2}} \\
+			\cos{\frac{\theta}{2}} &= \pm \sqrt{\frac{1 + \cos\theta}{2}}\\
+			\tan{\frac{\theta}{2}} &= \pm \sqrt{\frac{1 - \cos\theta}{1 + \cos\theta}}
+		\end{align*}
+
+		\subsection*{Logarithms \& some of their properties}
+		\[y = \log_{b}x \lgcequiv x = b^{y}\]
+		\begin{align*}
+			\log_{b}{b} &= 1 & \log_{b}{b^x} &= x \\
+			b^{\log_{b}{x}} &= x & \log_{b}{1} &= 0
+		\end{align*}
+		\begin{align*}
+			\log_{b}{xy} &= \log_{b}{x} + \log_{b}{y} & \log_{b}{a^x} &= x \log_{b}{a} \\
+			\log_{b}{\frac{x}{y}} &= \log_{b}{x} - \log_{b}{y} & \log_{b}{\sqrt[x]{a}} &= \frac{\log_{b}{a}}{x}
+		\end{align*}
+
+		\subsection*{Inequalities, absolute values, \& some of their properties}
+		% segments copied straight from Paul's Online Math Notes
+		If \(a < b\) then \(a + c\) and \(a - c < b - c\)
+
+		If \(a < b\) and \(c > 0\) then \(ac < bc\) and \(\frac{a}{c} < \frac{b}{c}\)
+
+		If \(a < b\) and \(c < 0\) (i.e. \(c\) is negative) then \(ac > bc\) and \(\frac{a}{c} > \frac{b}{c}\)
+
+		If \(b\) is positive, then:
+		\begin{align*}  % this is kinda hacky but oh well.
+			\abs{p} &= b &\lgcimplies && p = -b \; \text{or} \; p = b \\
+			\abs{p} &< b &\lgcimplies && -b < p < b \\
+			\abs{p} &> b &\lgcimplies && p < -b \; \text{or} \; p > b
+		\end{align*}
+	\end{multicols}
+\end{document}

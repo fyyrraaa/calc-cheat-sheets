@@ -1,0 +1,95 @@
+\documentclass[main.tex]{subfiles}
+
+\begin{document}
+\section{Limits}
+\begin{multicols}{2} \raggedcolumns \setcounter{unbalance}{10}
+	\subsection*{Basics}
+	\subsubsection*{Limits at a point \(a\)}
+	\begin{definition}[informal]
+		\(\lim_{x \to a}{f(x)} = L\) means that as we approach \(x\) closer to \(a\) \emph{but not equal to} \(a\), 
+		the value for \(f(x)\) can get arbitrarily closer to \(L\).
+	\end{definition} 
+
+
+	\begin{definition}[formal]
+		Let \(a \in \R\), and \(f\) be a function defined on an arbitrary open interval that contains \(x = a\), except possibly \(x = a\) itself.
+		Then, \(\lim_{x \to a}{f(x)} = L\) iff for every \(\varepsilon > 0\) there exists \(\delta > 0\) \textbf{s.t.} if \(0 < |x - a| < \delta\) then \( |f(x) - L| < \varepsilon\).
+	\end{definition}
+
+	Note the following:
+	\begin{enumerate}
+	\item \(\lim_{x \to a}{f(x)} = L\) \textbf{iff} \(\lim_{x \to a^{-}}{f(x)} = L\) (LR limit) 
+	and \(\lim_{x \to a^{+}}{f(x)} = L\) (RH limit) are both true.
+	\item \(\lim_{x \to a}{f(x)} = f(a)\) implies that \(f(x)\) is \emph{continuous} at \(x = a\).
+	\end{enumerate}
+
+	\subsubsection*{Limits at infinity}
+	\begin{definition}[informal]
+		\(\lim_{x \to \pm \infty}{f(x)} = L\) means that as we approach \(x\) to an arbitrarily large positive/negative number, the value for \(f(x)\) can get arbitrarily closer to \(L\)
+	\end{definition}
+
+	\subsection*{Properties}
+	Assuming that the limit exists, then all the following is true:
+	\begin{align*}
+		\lim_{x \to a} k = k && \lim_{x \to a} x = a
+	\end{align*}
+	\begin{equation*}
+		\lim_{x \to a} f(x) = f(a) \; \text{if the function \(f\) is \emph{continuous} at \(x = a\)}
+	\end{equation*}
+	\begin{align*}
+		\lim_{x \to a}(f(x) \pm g(x)) &= \lim_{x \to a}f(x) \pm \lim_{x \to a}g(x) \\
+		\lim_{x \to a}(k \cdot f(x)) &= k \lim_{x \to a}f(x) \\
+		\lim_{x \to a}(f(x) \cdot g(x)) &= \lim_{x \to a}{f(x)} \cdot \lim_{x \to a}{g(x)} \\
+		\lim_{x \to a} \frac{f(x)}{g(x)} &= \frac{\lim_{x \to a} f(x)}{\lim_{x \to a} g(x)} \;\;\;\; (g(a) \neq 0) \\
+		\lim_{x \to a}f(x)^n &= \left( \lim_{x \to a}{f(x)}\right)^n \\
+	\end{align*}
+
+	If \(\displaystyle \lim_{x \to a} f(x) = L\), \(\displaystyle \lim_{x \to L} g(x) = K\) s.t. \(g(L) = K\), then
+	\begin{equation*}
+		\lim_{x \to a} g(f(x)) = K.
+	\end{equation*}
+
+
+	\subsection*{Existence of limits}
+	A limit may not exist for the following reasons:
+	\begin{enumerate}
+		\item \(\lim_{x \to a^{-}}{f(x)} \neq \lim_{x \to a^{+}}{f(x)}\)
+		\item \(f(x)\) oscillates wildly/does not settle as \(x \to a\)
+	\end{enumerate}
+
+	\subsection*{Indeterminate forms}
+	The following ``forms'' are considered to be indeterminate.
+	\begin{align*}
+		\frac{0}{0} && \frac{\infty}{\infty} && 0 \times \infty && \infty - \infty\\
+		0^0 && 1^\infty && \infty^0
+	\end{align*}
+
+	\subsection*{Vertical \& horizontal asymptotes}
+	\begin{definition}[vertical asymptotes]
+		If \(\lim_{x \to a}{f(x)}\) approaches \(\pm \infty\) from either left or right (or both) of \(a\), then the line \(x = c\) is a vertical asymptote of \(f\).
+	\end{definition}
+	\begin{definition}[horizontal asymptotes]
+		If \(\lim_{x \to \infty}{f(x)} = L\) or \(\lim_{x \to -\infty}{f(x)} = L\), then the line \(y = L\) is a horizontal asymptote of \(f\).
+	\end{definition}
+
+
+	\subsection*{Squeeze theorem}
+	\begin{theorem}
+	If \(f(x) \leq g(x) \leq h(x)\) for all \(x\) near \(x = a\) (except possibly at \(x = a\)), and
+	\[\lim_{x \to a}{f(x)} = \lim_{x \to a}{h(x)} = L,\] then \[\lim_{x \to a}{g(x)} = L\]
+	\end{theorem}
+
+	\subsection*{Some important-to-remember limits}
+	\subsubsection*{Limits at a point}
+	\begin{align*}  % this one is also pretty hacky; i'd prefer using something like array for next time.
+		\lim_{x \to 0} \frac{1}{x} &= \text{DNE} & \lim_{x \to 0} \frac{1}{x^2} &= +\infty \\
+		\lim_{x \to 0} \frac{\sin{x}}{x} &= 1 & \lim_{x \to 0} \frac{\cos{x} - 1}{x} &= 0 \\
+		\lim_{x \to 0} (1 + x)^{1/x} &= e & \lim_{x \to 0} \frac{e^x - 1}{x} &= 1 \\
+		\lim_{x \to 0} \sin{\frac{1}{x}} &= \text{DNE (chaos)}
+	\end{align*}
+	\subsubsection*{Limits at infinity}
+	\begin{align*}
+		\lim_{x \to \infty} \frac{1}{x} &= 0 & \lim_{x \to \infty} \sin{x} = \text{DNE}
+	\end{align*}
+\end{multicols}
+\end{document}
