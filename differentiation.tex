@@ -5,10 +5,12 @@
 \begin{multicols}{2} \raggedcolumns \setcounter{unbalance}{10}
 	\subsection*{Basics}
 	\begin{definition}[informal]
-	A function \(f\) is differentiable at \(x = a\) if \[f'(a) = \lim_{h \to 0} \frac{f(a+h) - f(a)}{h}\] exists. Additionally, \(f\) is differentiable on an open interval \((a, b)\) if \(f\) is differentiable at every point in the interval.
+	A function \(f\) is differentiable at \(x = a\) if \[f'(a) = \lim_{h \to 0} \frac{f(a+h) - f(a)}{h}\] exists.
+	Additionally, \(f\) is differentiable on an open interval \((a, b)\) if \(f\) is differentiable at every point in the interval.
 	\end{definition}
 	\begin{note}
-	If the function \(f\) is differentiable at \(x = a\), then it must be continuous at \(x = a\). \emph{However}, a function \(f\) that is continuous at \(x = a\) may or may not be differentiable at \(x = a\).
+	If the function \(f\) is differentiable at \(x = a\), then it will be continuous at \(x = a\).
+	\emph{However}, a function \(f\) that is continuous at \(x = a\) \textbf{may or may not} be differentiable at \(x = a\).
 	\end{note}
 
 	\subsection*{Common derivatives}
@@ -65,15 +67,16 @@
 
 	\subsection*{Mean value theorem}
 	\begin{theorem}
-	Suppose that \(f(x)\) is continuous on the closed interval \([a, b]\) and is differentiable on the open interval \((a, b)\). Then, there exists a number \(c \in (a, b)\) s.t. \[f'(c) = \frac{f(b) - f(a)}{b - a}.\]
+	Suppose that \(f(x)\) is continuous on the closed interval \([a, b]\) and is differentiable on the open interval \((a, b)\).
+	Then, there exists a number \(c \in (a, b)\) s.t. \[f'(c) = \frac{f(b) - f(a)}{b - a}.\]
 	\end{theorem}
 
 	\subsection*{Linear approximation}
-	For a linear approximation \(f(x) \approx f(a) + f'(a)(x - a),\) we can apply a linearization of \(f(x) \approx f(a) + f'(a)(x - a).\)
+	For a linear approximation \[f(x) \approx f(a) + f'(a)(x - a),\] we can apply a linearization of \[f(x) \approx f(a) + f'(a)(x - a).\]
 
 	\subsection*{Newton's method}
 	\begin{definition}
-	If \(x_n\) is the nth guess for the solution of \(f(x) = 0\), then the \((n + 1)\)th guess would be \[x_{n+1} = x_n - \frac{f(x_n)}{f'(x_n)}\] provided that \(f'(x_n)\) exists.
+	If \(x_n\) is the nth guess for the solution of \(f(x) = 0\), then the \((n + 1)\)th guess would be \[x_{n+1} = x_n - \frac{f(x_n)}{f'(x_n)},\] provided that \(f'(x_n)\) exists.
 	\end{definition}
 \end{multicols}
 \end{document}
