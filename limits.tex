@@ -64,6 +64,8 @@
 		0^0 && 1^\infty && \infty^0
 	\end{align*}
 
+	When coming across these forms, you might need to rearrange the equation or use L'Hôpital's rule (this only applies for \(\frac{0}{0}\) and \(\frac{\infty}{\infty}\)).
+
 	\subsection*{Vertical \& horizontal asymptotes}
 	\begin{definition}[vertical asymptotes]
 		If \(\lim_{x \to a}{f(x)}\) approaches \(\pm \infty\) from either left or right (or both) of \(a\), then the line \(x = c\) is a vertical asymptote of \(f\).
@@ -79,17 +81,25 @@
 	\[\lim_{x \to a}{f(x)} = \lim_{x \to a}{h(x)} = L,\] then \[\lim_{x \to a}{g(x)} = L\]
 	\end{theorem}
 
+	\subsection*{Intermediate value theorem}
+	\begin{theorem}
+	Suppose that \(f(x)\) is continuous on \([a, b]\), and let \(M\) be any number between \(f(a)\) and \(f(b)\). Then there exists a number \(c\) s.t. \(a < c < b\) and \(f(c) = M\).
+	\end{theorem}
+
 	\subsection*{Some important-to-remember limits}
 	\subsubsection*{Limits at a point}
 	\begin{align*}  % this one is also pretty hacky; i'd prefer using something like array for next time.
 		\lim_{x \to 0} \frac{1}{x} &= \text{DNE} & \lim_{x \to 0} \frac{1}{x^2} &= +\infty \\
 		\lim_{x \to 0} \frac{\sin{x}}{x} &= 1 & \lim_{x \to 0} \frac{\cos{x} - 1}{x} &= 0 \\
 		\lim_{x \to 0} (1 + x)^{1/x} &= e & \lim_{x \to 0} \frac{e^x - 1}{x} &= 1 \\
-		\lim_{x \to 0} \sin{\frac{1}{x}} &= \text{DNE (chaos)}
+		\lim_{x \to 0} \sin{\frac{1}{x}} &= \text{DNE (chaos)} & \lim_{x \to 0^{+}} \ln{x} &= -\infty
 	\end{align*}
 	\subsubsection*{Limits at infinity}
 	\begin{align*}
-		\lim_{x \to \infty} \frac{1}{x} &= 0 & \lim_{x \to \infty} \sin{x} = \text{DNE}
+		\lim_{x \to \infty} \frac{1}{x} = 0 && \lim_{x \to \infty} \sin{x} = \text{DNE} \\
+		\lim_{x \to \infty} \sin{\frac{1}{x}} = 0 && \lim_{x \to \infty} \ln{x} = \infty \\
+		\lim_{x \to +\infty} \frac{x}{\sqrt{x^2 + 1}} = 1 && \lim_{x \to -\infty} \frac{x}{\sqrt{x^2 + 1}} = -1 \\
+		\lim_{x \to \infty} \frac{\sin{x}}{x} = 0 && \lim_{x \to \infty} x^{1/x} = 1
 	\end{align*}
 \end{multicols}
 \end{document}
