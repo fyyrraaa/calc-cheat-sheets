@@ -3,21 +3,73 @@
 \begin{document}
 \section{Integration}
 \begin{multicols}{2}
-\subsection*{Basics}
+	\subsection*{Basics}
+	\begin{definition}[integration as antiderivative]
+	If \(F(x)\) is an antiderivative of \(f(x)\) s.t. \(F'(x) = f(x)\),
+	and the general antiderivative of \(f(x)\) is \(F(x) + C\),
+	where \(C \in \R\) is an arbitrary constant of integration,
+	then \[\int f(x) \ dx = F(x) + C.\]
+	\end{definition}
 
-\subsection*{Some properties}
+	\begin{definition}[definite integration via Riemann sums]
+	Suppose that \(f(x)\) is continuous within \([a, b]\). Then, by dividing \([a, b]\) into \(n\) subintervals of width \(\Delta x\), picking \(x_i\) for each interval,
+	\[\int_{a}^b f(x) \ dx = \lim_{n \to \infty}{\left(\sum_{i = 1}^n f(x_i) \Delta x  \right)}\] (per Riemann sums.)
+	\end{definition}
 
-\subsection*{Common integrals}
-\subsubsection*{Basics}
+	\subsubsection*{Common finite sums}
+	\begin{align*}
+	\sum_{i = 1}^n 1 &= n & \sum_{i = 1}^n i &= \frac{n(n + 1)}{2} \\
+	\sum_{i = 1}^n i^2 &= \frac{n(n + 1)(2n + 1)}{6} & \sum_{i = 1}^n i^3 &= \frac{n^2(n + 1)^2}{4}
+	\end{align*}
 
-\subsubsection*{Trig functions}
+	\subsection*{Fundamental theorem of calculus}
+	\begin{enumerate}
+	\item If \(f(x)\) is continuous on \([a, b]\), then
+	\(g(x) = \int_a^b f(t) \ dt\) is also continuous on \([a, b]\) s.t.
+	\[g'(x) = \frac{d}{dx} \left(\int_a^b f(t) \ dt \right) = f(x).\]
+	\item If \(f(x)\) is continuous on \([a, b]\) and \(F(x) = \int f(x) \ dx\), then
+	\[\int_a^b f(x) \ dx = F(b) - F(a).\]
+	\end{enumerate}
 
-\subsubsection*{Logarithms}
+	\subsection*{Common integrals}
+	\subsubsection*{Basics}
+	\begin{align*}
+	\int \frac{1}{x} \ dx = \ln |x| + C && \int \frac{1}{ax + b} \ dx = \frac{1}{a} \ln |ax + b| + C
+	\end{align*}
 
-\subsection*{Integration techniques}
-\subsubsection*{\(u\)-substitution}
+	\subsubsection*{Trig functions}
+	\begin{align*}
+		\int \tan{\theta} \ d\theta &= -\ln{|\cos{\theta}|} + C & \int \cot{\theta} \ d\theta &= \ln{|\sin{\theta}|} + C \\
+		&= \ln{|\sec{\theta}|} + C & &= -\ln{|\csc{\theta}|} + C
+	\end{align*}
+	\begin{align*}
+		\int \sec{\theta} \ d\theta &= \ln{|\sec{\theta} + \tan{\theta}|} + C \\
+		\int \csc{\theta} \ d\theta &= \ln{|\csc{\theta} - \cot{\theta}|} + C
+	\end{align*}
+	\subsubsection*{Logarithms}
+	\begin{align*}
+	\int e^x \ dx = e^x + C && \int a^x \ dx = \frac{a^x}{\ln{a}} + C
+	\end{align*}
 
-\subsubsection*{Products and some quotients of trig functions}
+	\subsection*{Integration techniques}
+	\subsubsection*{\(u\)-substitution}
+
+	\subsubsection*{Products and some quotients of trig functions}
+	For \(\displaystyle \int \sin^n{x} \cos^m{x} \ dx\):
+	\begin{enumerate}
+	\item \(n\) odd: strip 1 sine out, convert the rest to cosines; then use \(u = \cos{x}\).
+	\item \(m\) odd: strip 1 cosine out, convert the rest to sines; then use \(u = \sin{x}\).
+	\item \(n\) and \(m\) odd: use either 1 or 2
+	\item \(n\) and \(m\) even: use double-angle and/or half-angle formula to reduce equation to easily-integrable form.
+	\end{enumerate}
+
+	For \(\displaystyle \int \tan^n{x} \sec^m{x} \ dx\):
+	\begin{enumerate}
+	\item \(n\) odd: strip 1 tan and 1 secant, convert the rest to secants; then use \(u = \sec{x}\).
+	\item \(m\) even: strip 2 secants out, convert the rest to tan; then use \(u = \tan{x}\).
+	\item \(n\) odd, \(m\) even: use either 1 or 2.
+	\item \(n\) even, \(m\) odd: good luck.
+	\end{enumerate}
 
 \end{multicols}
 
