@@ -10,7 +10,6 @@
 		the value for \(f(x)\) can get arbitrarily closer to \(L\).
 	\end{definition} 
 
-
 	\begin{definition}[formal]
 		Let \(a \in \R\), and \(f\) be a function defined on an arbitrary open interval that contains \(x = a\), except possibly \(x = a\) itself.
 		Then, \(\lim_{x \to a}{f(x)} = L\) iff for every \(\varepsilon > 0\) there exists \(\delta > 0\) \textbf{s.t.} if \(0 < |x - a| < \delta\) then \( |f(x) - L| < \varepsilon\).
@@ -27,6 +26,10 @@
 	\begin{definition}[informal]
 		\(\lim_{x \to \pm \infty}{f(x)} = L\) means that as we approach \(x\) to an arbitrarily large positive/negative number, the value for \(f(x)\) can get arbitrarily closer to \(L\)
 	\end{definition}
+
+	\begin{note}
+	To evaluate limits at infinity for rational functions (it also works for ratios of functions involving roots), divide both numerator and denominator by the largest power of \(x\) that occurs in the denominator.
+	\end{note}
 
 	\subsection*{Properties}
 	Assuming that the limit exists, then all the following is true:
@@ -57,6 +60,11 @@
 		\item \(f(x)\) oscillates wildly/does not settle as \(x \to a\)
 	\end{enumerate}
 
+	\subsection*{Intermediate value theorem}
+	\begin{theorem}
+	Suppose that \(f(x)\) is continuous on \([a, b]\), and let \(M\) be any number between \(f(a)\) and \(f(b)\). Then there exists a number \(c\) s.t. \(a < c < b\) and \(f(c) = M\).
+	\end{theorem}
+
 	\subsection*{Indeterminate forms}
 	The following ``forms'' are considered to be indeterminate.
 	\begin{align*}
@@ -66,24 +74,30 @@
 
 	When coming across these forms, you might need to rearrange the equation or use L'Hôpital's rule (this only applies for \(\frac{0}{0}\) and \(\frac{\infty}{\infty}\)).
 
-	\subsection*{Vertical \& horizontal asymptotes}
+	\subsection*{Asymptotes}
 	\begin{definition}[vertical asymptotes]
 		If \(\lim_{x \to a}{f(x)}\) approaches \(\pm \infty\) from either left or right (or both) of \(a\), then the line \(x = c\) is a vertical asymptote of \(f\).
 	\end{definition}
 	\begin{definition}[horizontal asymptotes]
 		If \(\lim_{x \to \infty}{f(x)} = L\) or \(\lim_{x \to -\infty}{f(x)} = L\), then the line \(y = L\) is a horizontal asymptote of \(f\).
 	\end{definition}
-
+	\begin{definition}[slant asymptotes]
+		The line \(y = mx + b\), \(m \neq 0\), is a slant asymptote if either
+		\[
+			\begin{aligned}
+			\lim_{x \to \infty} (f(x) - (mx + b)) = 0 && \text{or} && \lim_{x \to -\infty} (f(x) - (mx + b)) = 0.
+			\end{aligned}
+		\]
+		This says that the vertical distance between \(f(x)\) and \(y = mx + b\) approaches 0 as \(x \to \infty\) or \(x \to -\infty\).
+	\end{definition}
+	\begin{definition}[asymptotic behaviour.]
+	If \(\lim_{x \to \infty} (f(x) - g(x)) = 0\) or \(\lim_{x \to -\infty} (f(x) - g(x)) = 0\), then \(f(x)\) is asymptotic to \(g(x)\); i.e. they approach each other as \(x \to \infty\) or \(x \to -\infty\)
+	\end{definition}
 
 	\subsection*{Squeeze theorem}
 	\begin{theorem}
 	If \(f(x) \leq g(x) \leq h(x)\) for all \(x\) near \(x = a\) (except possibly at \(x = a\)), and
 	\[\lim_{x \to a}{f(x)} = \lim_{x \to a}{h(x)} = L,\] then \[\lim_{x \to a}{g(x)} = L\]
-	\end{theorem}
-
-	\subsection*{Intermediate value theorem}
-	\begin{theorem}
-	Suppose that \(f(x)\) is continuous on \([a, b]\), and let \(M\) be any number between \(f(a)\) and \(f(b)\). Then there exists a number \(c\) s.t. \(a < c < b\) and \(f(c) = M\).
 	\end{theorem}
 
 	\subsection*{Some important-to-remember limits}
