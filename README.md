@@ -28,4 +28,6 @@ I haven't had the time to test whether this will work with other TeX engines.
 
 The cheat sheet is partly inspired by (and copied from) [Paul's Online Math Notes](https://tutorial.math.lamar.edu/); in particular his various cheat sheets for algebra and calculus, alongside my notes from this course.
 
+Additionally, the completing the square section uses material from [Wikipedia](https://en.wikipedia.org/wiki/Completing_the_square).
+
 [^1]: The reason that it's in a submodule is more so that I have a set of common packages that I use all in one place, and readily available, as soon as the LaTeX repo is cloned.
