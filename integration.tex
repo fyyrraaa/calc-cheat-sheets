@@ -68,7 +68,27 @@
 	\item \(n\) odd: strip 1 tan and 1 secant, convert the rest to secants; then use \(u = \sec{x}\).
 	\item \(m\) even: strip 2 secants out, convert the rest to tan; then use \(u = \tan{x}\).
 	\item \(n\) odd, \(m\) even: use either 1 or 2.
-	\item \(n\) even, \(m\) odd: good luck.
+	\item \(n\) even, \(m\) odd: good luck (use a combination of identities, integration by parts, and "ingenuity" (per my notes))
+	\end{enumerate}
+
+	For \(\displaystyle \int \sin{ax} \cos{bx} \ dx\), \(\displaystyle \int \sin{ax} \sin{bx} \ dx\), \(\displaystyle \int \cos{ax} \cos{bx} \ dx\): use either the appropriate sum-difference angle formulae or doing integration by parts twice.
+
+	\subsubsection*{Trig substitution}
+
+	\subsubsection*{Partial fraction decomposition}
+	% copied from slides in MATH 146
+	For \(\int \frac{f(x)}{g(x)} \ dx\), do the following:
+	\begin{enumerate}
+		\item make sure that \(\frac{f(x)}{g(x)}\) is a proper fraction (i.e. \(f(x)\)'s degree is lower than \(g(x)\)). If not, divide \(f(x)\) by \(g(x)\) per long division, and work with the remainder terms.
+		\item Factorize \(g(x)\).
+		\item Let \(x - r\) be a linear factor of \(g(x)\). Note that \(r\) can be any number. Suppose \((x - r)^m\) is the highest power of \(x - r\) when factoring \(g(x)\). Then, to this factor, assign the sum of the \(m\) partial fractions, i.e. 
+		\[\frac{A_1}{(x - r)} + \frac{A_2}{(x - r)^2} + \dots + \frac{A_m}{(x - r)^m}.\] 
+		Do this for each distinct linear factors of \(g(x)\).
+		\item Let \(x^2 + px + q\) be an \emph{irreducible} quadratic factor of \(g(x)\) (i.e. \(b^2 - 4ac < 0\).) Suppose \((x^2 + px + q)^n\) is the highest power of \(x^2 + px + q\) when factoring \(g(x)\). Then, to this factor: 
+		\[\frac{B_1x + C_1}{(x^2 + px + q)} + \frac{B_2x + C_2}{(x^2 + px + q)^2} + \dots + \frac{B_n x + C_n}{(x^2 + px + q)^n}.\]
+		Do this for each distinct quadratic factors of g(x).
+		\item Write the sum of all these partial fractions as one fraction, and equate it to \(\frac{f(x)}{g(x)}\).
+		\item Equate the coefficients of the same powers of \(x\) in the numerators of both sides, and find the coefficients. Then replace them back into the partial fraction form.
 	\end{enumerate}
 
 \end{multicols}
