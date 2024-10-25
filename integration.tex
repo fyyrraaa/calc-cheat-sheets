@@ -2,7 +2,9 @@
 
 \begin{document}
 \section{Integration}
-\begin{multicols}{2}
+\ifSubfilesClassLoaded{%
+\begin{multicols}{2} \raggedcolumns \setcounter{unbalance}{10}
+}{}
 	\subsection*{Basics}
 	\begin{definition}[integration as antiderivative]
 	If \(F(x)\) is an antiderivative of \(f(x)\) s.t. \(F'(x) = f(x)\),
@@ -130,6 +132,9 @@
 	\end{itemize}
 
 
+%\end{multicols}
+\ifSubfilesClassLoaded{%
 \end{multicols}
+}{}
 
 \end{document}
