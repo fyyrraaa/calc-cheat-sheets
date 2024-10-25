@@ -106,6 +106,14 @@
 	\subsubsection*{Arc length}
 	For a differentiable function \(f(x)\) where \(f'(x)\) is also continuous between \([a, b]\), then the arc length \(L\) is \[L = \int_a^b \sqrt{1 + f'(x)^2} \ dx.\]
 
+	\subsubsection*{Surface area of a solid of revolution}
+	% copied from slides in MATH 146
+	The idea is to slice the surface into rings of typical area \[dA = 2 \pi R \ ds\] with
+	\begin{align*}
+		ds = \sqrt{1 + \left(\frac{dy}{dx}\right)^2} \ dx && \text{or} && ds = \sqrt{1 + \left(\frac{dx}{dy}\right)^2} \ dy.
+	\end{align*}
+	Then the total surface area is \[A = \int dA.\]
+
 	\subsubsection*{Volume of revolution}
 	\begin{tabular}{r c c}
 		\toprule
