@@ -6,6 +6,55 @@
 \begin{multicols}{2} \raggedcolumns \setcounter{unbalance}{10}
 }{}
 	
+	\subsection*{Separable ODEs}
+	\begin{definition}[basic]
+	A first-order differential equation is \emph{separable} if it can be written as \[\frac{dy}{dx} = g(x)f(y).\]
+	\end{definition}
+	
+	\subsubsection*{Solving separable ODEs}
+	\begin{enumerate}
+	\item Find the constant solution where \(f(y) = 0\) (or equivalents thereof).
+	\item Assuming that \(f(y) \neq 0\), rewrite the equation to the form of \[\frac{dy}{f(y)} = g(x) \ dx.\]
+	\item Integrate both sides. If it's integrable analytically, then the resulting equation is the general solution.
+	\item If possible, solve for \(y(x)\).
+	\end{enumerate}
+
+	\subsection*{Linear ODEs}
+	\begin{definition}[basic]
+	A differential equation is \emph{linear} if it can be written as \[\frac{dy}{dx} + P(x)y = Q(x).\]
+	\end{definition}
+
+	\subsubsection*{Solving linear ODEs}
+	\begin{enumerate}
+	\item Find the integrating factor \[I(x) = e^{\int P(x) \ dx}\]
+	\item Multiply both sides of the equation such that \[\frac{d(I(x) y)}{dx} = I(x)Q(x)\]
+	\item Integrate both sides and solve for \(y.\) This yields a general solution.
+	\item Use the initial conditions to get a specific solution for the given problem.
+	\end{enumerate}
+
+	\subsection*{Phase line analysis}
+	Mainly for \emph{autonomous} differential equations (i.e. forms similar to \(\frac{dy}{dx} = f(y)\).)
+	The idea is to infer the qualitative behaviour of the solutions \(y(x)\) by inspecting the differential equation, identifying:
+	\begin{enumerate}
+	\item points where \(f(y) = 0\), meaning solution is constant,
+	\item regions where either \(f(y) > 0\) or \(f(y) < 0\) --- meaning solution is either increasing or decreasing, respectively.
+	\end{enumerate}
+
+	If values near a constant are tending towards each other, the constant is said to be a stable equilibrium solution. Otherwise, it's unstable.
+
+	% [TODO]: add some example forms of separable differential equations?
+	\subsection*{Some forms of rate equation problems}
+
+	\subsection*{Growth models}
+	\subsubsection*{Exponential growth model}
+	Given \[\frac{dP}{dt} = \lambda P\] where \(P(0) = P_0\) and \(\lambda > 0\), the solution to the initial-value problem is
+	\[P(t) = P_0e^{\lambda t}.\]
+
+	\subsubsection*{Logistic growth model}
+	Given a carrying capacity of \(M\), a variation of the exponential growth model can be derived as \[\frac{dP}{dt} = \lambda P \left(1 - \frac{P}{M}\right),\] where \(P(0) = P_0.\) This requires phase-line analysis.
+
+	\subsubsection*{Logistic growth model with linear harvesting.}
+	Assuming that we perform constant harvesting 
 
 
 \ifSubfilesClassLoaded{%
