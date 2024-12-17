@@ -49,8 +49,11 @@
 	where \(T(t)\) is the coffee temp, \(T_A\) is the ambient temp, and \(k\) is a positive constant.
 
 	\subsubsection*{Beer problem}
-	\[\frac{dT}{dt} =\]
-	where \(T(t)\) is the coffee temp, \(T_A\) is the ambient temp, and \(k\) is a positive constant.
+	\begin{align*}
+		\frac{dV_\mathrm{alc-vat}}{dt} &= \frac{dV_\mathrm{alc-in}}{dt} - \frac{dV_\mathrm{alc-out}}{dt} \\
+		&= \%_\mathrm{in} \frac{dV_\mathrm{in}}{dt} - \%_\mathrm{out} \frac{dV_\mathrm{out}}{dt}
+	\end{align*}
+	where \(V_\mathrm{alc-vat}(t)\) is the volume of alcohol in the vat, \(V_\mathrm{alc-in}\) is the volume of alcohol coming into the vat, and \(V_\mathrm{alc-out}\) is the volume of alcohol coming out of the vat.
 
 	\subsubsection*{Cylindrical funnel}
 	\[\frac{dh}{dt} = - \left(\frac{a}{r}\right)^2 \sqrt{2gh}\]
