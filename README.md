@@ -11,7 +11,7 @@ Make sure that `latexmk` is included in your TeX distribution (especially for Mi
 Clone this repository, and include the submodule[^1] as well; i.e.
 
 ```shell
-$ git clone --recurse-submodules https://github.com/3stantedja/calc-cheat-sheets.git
+$ git clone --recurse-submodules https://github.com/fyyrraaa/calc-cheat-sheets.git
 ```
 
 After going into the repo, assuming you have a complete TeX distribution, run `latexmk` on the file you want to compile; e.g.
